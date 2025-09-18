@@ -1,0 +1,99 @@
+.earthquake-list {
+  list-style: disc inside;
+  padding: 0;
+  margin: 0 0 2rem 0;
+  font-size: 1.1rem;
+  width: 100%;
+}
+
+.earthquake-item {
+  cursor: pointer;
+  padding: 0.5rem 0.75rem;
+  margin-bottom: 0.5rem;
+  border-radius: 4px;
+  transition: background 0.2s;
+}
+
+.earthquake-item:hover {
+  background: #f0f4f8;
+}
+
+.earthquake-item.active {
+  background: #e0e0e0;
+  font-weight: bold;
+}
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  body {
+    margin: 0;
+    padding: 0;
+  }
+
+  .app-container {
+    font-family: sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+  }
+
+  .dashboard-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 2rem;
+    width: 100%;
+    max-width: 700px;
+  }
+
+  .earthquake-list {
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+
+  .earthquake-map {
+    width: 100%;
+    max-width: 600px;
+    height: 400px;
+  }
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
