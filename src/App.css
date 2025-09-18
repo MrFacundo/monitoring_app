@@ -1,99 +1,109 @@
-.earthquake-list {
-  list-style: disc inside;
-  padding: 0;
-  margin: 0 0 2rem 0;
-  font-size: 1.1rem;
-  width: 100%;
-}
-
-.earthquake-item {
-  cursor: pointer;
-  padding: 0.5rem 0.75rem;
-  margin-bottom: 0.5rem;
-  border-radius: 4px;
-  transition: background 0.2s;
-}
-
-.earthquake-item:hover {
-  background: #f0f4f8;
-}
-
-.earthquake-item.active {
-  background: #e0e0e0;
-  font-weight: bold;
-}
 #root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+	width: 100vw;
+	margin: 0;
+	padding: 1rem;
+	text-align: center;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.app-container {
+	font-family: sans-serif;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: flex-start;
+	min-height: 100vh;
+	gap: 1rem;
+	padding: 0;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.app-container h1 {
+	font-size: 1.5rem;
+	margin: 1rem 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  body {
-    margin: 0;
-    padding: 0;
-  }
-
-  .app-container {
-    font-family: sans-serif;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh;
-  }
-
-  .dashboard-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    gap: 2rem;
-    width: 100%;
-    max-width: 700px;
-  }
-
-  .earthquake-list {
-    width: 100%;
-    margin-bottom: 2rem;
-  }
-
-  .earthquake-map {
-    width: 100%;
-    max-width: 600px;
-    height: 400px;
-  }
-    animation: logo-spin infinite 20s linear;
-  }
+.app-container h2 {
+	font-size: 1.2rem;
+	margin: 0.5rem 0;
+	padding: 0 1rem;
 }
 
-.card {
-  padding: 2em;
+.app-container p {
+	font-size: 0.9rem;
+	margin: 0.5rem 0;
+	padding: 0 1rem;
 }
 
-.read-the-docs {
-  color: #888;
+.earthquake-map-container {
+	width: 100%;
+	height: 250px;
+	margin: 1rem 0;
+}
+
+.map-container {
+	width: 100%;
+	height: 100%;
+}
+td,
+th {
+	font-size: 0.7rem !important;
+}
+
+/* Tablet and up */
+@media (min-width: 768px) {
+	#root {
+		padding: 1.5rem;
+	}
+
+	.app-container {
+		gap: 1.5rem;
+	}
+
+	.app-container h1 {
+		font-size: 2rem;
+	}
+
+	.app-container h2 {
+		font-size: 1.4rem;
+	}
+
+	.app-container p {
+		font-size: 1rem;
+	}
+
+	.earthquake-map-container {
+		height: 300px;
+		max-width: 600px;
+		margin: 1.5rem auto;
+	}
+
+	td,
+	th {
+		font-size: 0.875rem !important;
+	}
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+	#root {
+		max-width: 1280px;
+		margin: 0 auto;
+		padding: 2rem;
+	}
+
+	.app-container {
+		gap: 2rem;
+	}
+
+	.app-container h1 {
+		font-size: 2.5rem;
+	}
+
+	.app-container h2 {
+		font-size: 1.6rem;
+	}
+
+	.earthquake-map-container {
+		height: 400px;
+		margin: 2rem auto;
+	}
 }
