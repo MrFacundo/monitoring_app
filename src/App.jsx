@@ -1,5 +1,6 @@
 import React, { useEffect, useState, useRef, useCallback } from 'react'
 import 'leaflet/dist/leaflet.css'
+import './leaflet-fix'
 import './App.css'
 import EarthquakeMap from './EarthquakeMap'
 import EarthquakeList from './EarthquakeList'

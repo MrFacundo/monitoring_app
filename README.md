@@ -1,12 +1,39 @@
-# React + Vite
+# Monitoring App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+<p align="center">
+	<img src="./repo_assets/desktop.png" alt="Desktop Screenshot" width="600" />
+	<br />
+	<br />
+	<img src="./repo_assets/mobile.png" alt="Mobile Screenshot" width="350" />
+</p>
 
-Currently, two official plugins are available:
+## Setup
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+1. **Build the Docker image:**
+	```sh
+	docker build -t monitoring-app .
+	```
 
-## Expanding the ESLint configuration
+2. **Run the container:**
+	```sh
+	docker run -p 3000:3000 monitoring-app
+	```
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+3. **Access the app:**
+	Open your browser and go to [http://localhost:3000](http://localhost:3000)
+
+---
+
+This will build and serve the production build of the app using a minimal static server.
+
+---
+
+## Desgin and features:
+Table implementation:
+
+- A **table layout** was chosen for the retrieved items to provide richer functionality.
+- **Material UI** was used in the table to quickly implement interactive features and a modern interface with minimal custom code.  Built-in support includes keyboard navigation: `Tab` moves focus between headers, and `Enter` sorts by the selected column.
+
+Optimizations:
+- **Memoization** was used in the `EarthquakeList`, `EarthquakeMap`, `TimeSelector` components to avoid unnecessary re-renders.
+- **Debounced Data Fetching:** Earthquake data is fetched with a 300ms debounce to prevent excessive network requests when the time range changes rapidly.
