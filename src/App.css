@@ -1,8 +1,7 @@
 #root {
-	width: 100vw;
-	margin: 0;
-	padding: 1rem;
-	text-align: center;
+	margin: 0 auto;
+	padding: 32px;
+	width: 100%;
 }
 
 .app-container {
@@ -10,100 +9,105 @@
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	justify-content: flex-start;
 	min-height: 100vh;
-	gap: 1rem;
+}
+
+.time-selector {
+	display: flex;
+	gap: 8px;
+	margin: 32px 0;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.time-selector button {
+	padding: 8px 16px;
+	border: 2px solid #ddd;
+	background: white;
+	border-radius: 4px;
+	cursor: pointer;
+	transition: all 0.2s;
+	font-size: 16px;
+}
+
+.time-selector button:hover {
+	border-color: #2196f3;
+}
+
+.time-selector button.active {
+	background: #2196f3;
+	color: white;
+	border-color: #2196f3;
+}
+
+h1 {
 	padding: 0;
+	margin: 8px 0 0 0;
+	font-size: 36px;
+	text-align: center;
 }
 
-.app-container h1 {
-	font-size: 1.5rem;
-	margin: 1rem 0;
+h2 {
+	font-size: 18px;
+	text-align: center;
 }
 
-.app-container h2 {
-	font-size: 1.2rem;
-	margin: 0.5rem 0;
-	padding: 0 1rem;
+.desc-source {
+	margin-top: -16px;
+	font-size: 14px;
 }
 
-.app-container p {
-	font-size: 0.9rem;
-	margin: 0.5rem 0;
-	padding: 0 1rem;
+.dashboard-layout {
+	display: flex;
+	gap: 32px;
+	width: 100%;
+	max-width: 1200px;
+	align-items: flex-start;
+}
+
+.left-panel,
+.right-panel {
+	flex: 1;
+	min-width: 0;
+	width: 100%;
 }
 
 .earthquake-map-container {
 	width: 100%;
-	height: 250px;
-	margin: 1rem 0;
+	height: 400px;
+	margin: 0;
 }
 
 .map-container {
 	width: 100%;
 	height: 100%;
 }
-td,
-th {
-	font-size: 0.7rem !important;
-}
 
-/* Tablet and up */
-@media (min-width: 768px) {
+@media (max-width: 768px) {
 	#root {
-		padding: 1.5rem;
+		padding: 16px;
 	}
 
-	.app-container {
-		gap: 1.5rem;
+	.dashboard-layout {
+		flex-direction: column;
+		gap: 16px;
 	}
 
-	.app-container h1 {
-		font-size: 2rem;
+	.time-selector {
+		margin: 16px 0;
 	}
 
-	.app-container h2 {
-		font-size: 1.4rem;
-	}
-
-	.app-container p {
-		font-size: 1rem;
+	.time-selector button {
+		font-size: 13px;
+		padding: 6px 13px;
 	}
 
 	.earthquake-map-container {
 		height: 300px;
-		max-width: 600px;
-		margin: 1.5rem auto;
 	}
 
-	td,
-	th {
-		font-size: 0.875rem !important;
-	}
-}
-
-/* Desktop */
-@media (min-width: 1024px) {
-	#root {
-		max-width: 1280px;
-		margin: 0 auto;
-		padding: 2rem;
-	}
-
-	.app-container {
-		gap: 2rem;
-	}
-
-	.app-container h1 {
-		font-size: 2.5rem;
-	}
-
-	.app-container h2 {
-		font-size: 1.6rem;
-	}
-
-	.earthquake-map-container {
-		height: 400px;
-		margin: 2rem auto;
+	td, th {
+		padding: 8px !important;
+		font-size: 12px !important;
 	}
 }
