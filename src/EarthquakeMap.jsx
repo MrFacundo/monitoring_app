@@ -1,4 +1,4 @@
-import React from 'react';
+import { useEffect } from 'react'
 import { MapContainer, TileLayer, Marker, Popup, useMap } from 'react-leaflet';
 function EarthquakeMap({ earthquakes, activeCoords }) {
   return (
@@ -28,8 +28,9 @@ function EarthquakeMap({ earthquakes, activeCoords }) {
 
 function MapPanner({ coords }) {
   const map = useMap()
-  React.useEffect(() => {
-    map.setView(coords)
+  useEffect(() => {
+    map.closePopup()
+    map.flyTo(coords, map.getZoom(), { animate: true })
   }, [coords, map])
   return null
 }

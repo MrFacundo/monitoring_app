@@ -50,27 +50,25 @@ function App() {
           Source: <a href="https://earthquake.usgs.gov/" target="_blank" rel="noopener noreferrer">USGS</a>
         </em>
       </p>
-      <MemoTimeSelector timeRange={timeRange} setTimeRange={setTimeRange} />
-
-      {loading ? (
-        <p>Loading...</p>
-      ) : (
-        <div className="dashboard-layout">
-          <div className="left-panel">
-            <MemoEarthquakeList
-              earthquakes={earthquakes}
-              setActiveCoords={memoizedSetActiveCoords}
-            />
-          </div>
-
-          <div className="right-panel">
-            <MemoEarthquakeMap
-              earthquakes={earthquakes}
-              activeCoords={activeCoords}
-            />
-          </div>
+      <MemoTimeSelector
+        timeRange={timeRange}
+        setTimeRange={setTimeRange}
+        disabled={loading}
+      />
+      <div className="dashboard-layout">
+        <div className="left-panel">
+          <MemoEarthquakeList
+            earthquakes={earthquakes}
+            setActiveCoords={memoizedSetActiveCoords}
+          />
         </div>
-      )}
+        <div className="right-panel">
+          <MemoEarthquakeMap
+            earthquakes={earthquakes}
+            activeCoords={activeCoords}
+          />
+        </div>
+      </div>
     </div>
   )
 }

@@ -1,5 +1,3 @@
-import './App.css'
-
 const timeRanges = [
   { label: 'Past Hour', value: 'hour' },
   { label: 'Past Day', value: 'day' },
@@ -7,13 +5,13 @@ const timeRanges = [
   { label: '30 Days', value: 'month' },
 ]
 
-
-function TimeSelector({ timeRange, setTimeRange }) {
+function TimeSelector({ timeRange, setTimeRange , disabled}) {
   return (
     <div className="time-selector">
       {timeRanges.map(({ label, value }) => (
         <button
           key={value}
+          disabled={disabled}
           className={timeRange === value ? 'active' : ''}
           onClick={() => setTimeRange(value)}
         >

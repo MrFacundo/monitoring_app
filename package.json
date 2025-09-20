@@ -1,5 +1,5 @@
 {
-  "name": "monitoring_app",
+  "name": "earthquake_monitoring_app",
   "private": true,
   "version": "0.0.0",
   "type": "module",
