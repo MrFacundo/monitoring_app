@@ -55,9 +55,9 @@ This React application displays earthquake data from the USGS (United States Geo
 ## Future Implementation Considerations
 
 ### Performance Optimization
-- **Virtual Table Rendering**: Implement libraries like `react-window` or `react-virtualized` for handling large earthquake datasets without DOM performance degradation
+- **Virtual Table Rendering**: Implement libraries like `react-virtualized` for handling large datasets without DOM performance degradation
 - **Table Pagination**: Add client-side or server-side pagination to manage large result sets efficiently
-- **Data Caching**: Implement smart caching strategies to reduce redundant API calls and improve response times
+- **Data Caching**: Implement caching strategies to reduce redundant API calls and improve response times
 
 ### Data Management
 - **Dynamic Dataset Limits**: Allow users to configure how many earthquakes to display (10, 25, 50, 100+ options)
@@ -69,7 +69,6 @@ This React application displays earthquake data from the USGS (United States Geo
 ### Enhanced User Experience
 - **Progressive Loading**: Implement skeleton screens and incremental data loading for better perceived performance
 - **Error Recovery**: Add retry mechanisms and more informative error messages with suggested actions
-- **Offline Capabilities**: Cache recent earthquake data for basic offline viewing using service workers
 
 ### Advanced Features
 - **Prompt based input**: Allow users to input custom date ranges or specific locations for earthquake searches
